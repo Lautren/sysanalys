@@ -157,6 +157,7 @@
             this.Results.Size = new System.Drawing.Size(102, 30);
             this.Results.TabIndex = 0;
             this.Results.Text = "Results";
+            this.Results.Visible = false;
             this.Results.Click += new System.EventHandler(this.Results_Click);
             // 
             // Form1

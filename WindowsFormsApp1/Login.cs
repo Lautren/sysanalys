@@ -1,19 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-
+using MongoDB.Driver;
+using MongoDB.Bson;
 namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
-        
+
+        public class People
+        {
+            ObjectId id { set; get; }
+            public string email { set; get; }
+            public string login { set; get; }
+            public string password { set; get; }
+
+        }
         public Login()
         {
             InitializeComponent();
@@ -28,19 +29,29 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
+            MongoClient client = new MongoClient("mongodb://localhost");
+            var db = client.GetDatabase("SysAnal1");
+            var collection = db.GetCollection<People>("users");
+            var filter1 = Builders<People>.Filter.Eq("login", LoginBox.Text);
+            var result = collection.Find(filter1).ToListAsync();
+
+
             if (LoginBox.Text == "" || PasswordBox.Text == "")
+            //if (result == null)
             {
-                MessageBox.Show("Неправильный логин или пароль", "Ошибка", MessageBoxButtons.OK);
+                MessageBox.Show("Invalid login or password", "Error", MessageBoxButtons.OK);
             }
-            else
+            else 
             {
                 Form a = new Form1();
                 a.Show();
                 this.Hide();
+
             }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

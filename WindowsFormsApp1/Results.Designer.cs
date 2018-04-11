@@ -35,13 +35,13 @@
             this.TurnButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Experts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LAB1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LAB2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.UnturnButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TurnButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -52,6 +52,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.Controls.Add(this.UnturnButton);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.TurnButton);
             this.panel1.Controls.Add(this.CloseButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -83,38 +85,41 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Experts,
-            this.LAB1,
-            this.LAB2});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 64);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 53);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(782, 374);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 397);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Experts
+            // button1
             // 
-            this.Experts.HeaderText = "Experts";
-            this.Experts.Name = "Experts";
-            this.Experts.ReadOnly = true;
+            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(604, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 28);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Показ результатов";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // LAB1
+            // UnturnButton
             // 
-            this.LAB1.HeaderText = "LAB1";
-            this.LAB1.Name = "LAB1";
-            this.LAB1.ReadOnly = true;
-            // 
-            // LAB2
-            // 
-            this.LAB2.HeaderText = "LAB2";
-            this.LAB2.Name = "LAB2";
-            this.LAB2.ReadOnly = true;
+            this.UnturnButton.Image = ((System.Drawing.Image)(resources.GetObject("UnturnButton.Image")));
+            this.UnturnButton.Location = new System.Drawing.Point(53, 3);
+            this.UnturnButton.Name = "UnturnButton";
+            this.UnturnButton.Size = new System.Drawing.Size(19, 18);
+            this.UnturnButton.TabIndex = 3;
+            this.UnturnButton.TabStop = false;
+            this.UnturnButton.Click += new System.EventHandler(this.UnturnButton_Click);
             // 
             // Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -125,6 +130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TurnButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,8 +142,7 @@
         private System.Windows.Forms.PictureBox TurnButton;
         private System.Windows.Forms.PictureBox CloseButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Experts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LAB1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LAB2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox UnturnButton;
     }
 }

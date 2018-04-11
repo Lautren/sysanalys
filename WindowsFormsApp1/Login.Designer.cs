@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(348, 53);
+            this.panel1.Size = new System.Drawing.Size(361, 53);
             this.panel1.TabIndex = 0;
             // 
             // TurnButton
@@ -110,7 +110,7 @@
             this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.PasswordBox.Location = new System.Drawing.Point(158, 139);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(100, 29);
+            this.PasswordBox.Size = new System.Drawing.Size(122, 29);
             this.PasswordBox.TabIndex = 3;
             // 
             // LoginBox
@@ -118,7 +118,7 @@
             this.LoginBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.LoginBox.Location = new System.Drawing.Point(158, 95);
             this.LoginBox.Name = "LoginBox";
-            this.LoginBox.Size = new System.Drawing.Size(100, 29);
+            this.LoginBox.Size = new System.Drawing.Size(122, 29);
             this.LoginBox.TabIndex = 4;
             // 
             // button1
@@ -126,7 +126,7 @@
             this.button1.BackColor = System.Drawing.Color.Chocolate;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(183, 183);
+            this.button1.Location = new System.Drawing.Point(205, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 5;
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 254);
+            this.ClientSize = new System.Drawing.Size(361, 270);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LoginBox);

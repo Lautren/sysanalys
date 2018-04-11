@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.testbutton = new System.Windows.Forms.Button();
             this.addComboBox = new System.Windows.Forms.Button();
             this.sentRes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -63,6 +64,7 @@
             this.Yes6 = new System.Windows.Forms.RadioButton();
             this.No6 = new System.Windows.Forms.RadioButton();
             this.Middle6 = new System.Windows.Forms.RadioButton();
+            this.result1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TurnButton)).BeginInit();
@@ -87,6 +89,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.panel3.Controls.Add(this.result1);
+            this.panel3.Controls.Add(this.testbutton);
             this.panel3.Controls.Add(this.addComboBox);
             this.panel3.Controls.Add(this.sentRes);
             this.panel3.Controls.Add(this.panel4);
@@ -95,6 +99,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(137, 709);
             this.panel3.TabIndex = 2;
+            // 
+            // testbutton
+            // 
+            this.testbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.testbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.testbutton.ForeColor = System.Drawing.Color.White;
+            this.testbutton.Location = new System.Drawing.Point(3, 607);
+            this.testbutton.Name = "testbutton";
+            this.testbutton.Size = new System.Drawing.Size(125, 42);
+            this.testbutton.TabIndex = 27;
+            this.testbutton.Text = "Готовый тест";
+            this.testbutton.UseVisualStyleBackColor = false;
+            this.testbutton.Click += new System.EventHandler(this.testbutton_Click);
             // 
             // addComboBox
             // 
@@ -175,6 +192,7 @@
             this.Yes1.TabStop = true;
             this.Yes1.Text = "Да";
             this.Yes1.UseVisualStyleBackColor = true;
+            this.Yes1.CheckedChanged += new System.EventHandler(this.Yes1_CheckedChanged);
             // 
             // No1
             // 
@@ -187,6 +205,7 @@
             this.No1.TabStop = true;
             this.No1.Text = "Нет";
             this.No1.UseVisualStyleBackColor = true;
+            this.No1.CheckedChanged += new System.EventHandler(this.No1_CheckedChanged);
             // 
             // Middle1
             // 
@@ -199,6 +218,7 @@
             this.Middle1.TabStop = true;
             this.Middle1.Text = "Воздержусь";
             this.Middle1.UseVisualStyleBackColor = true;
+            this.Middle1.CheckedChanged += new System.EventHandler(this.Middle1_CheckedChanged);
             // 
             // Yes2
             // 
@@ -211,6 +231,7 @@
             this.Yes2.TabStop = true;
             this.Yes2.Text = "Да";
             this.Yes2.UseVisualStyleBackColor = true;
+            this.Yes2.CheckedChanged += new System.EventHandler(this.Yes2_CheckedChanged);
             // 
             // No2
             // 
@@ -223,6 +244,7 @@
             this.No2.TabStop = true;
             this.No2.Text = "Нет";
             this.No2.UseVisualStyleBackColor = true;
+            this.No2.CheckedChanged += new System.EventHandler(this.No2_CheckedChanged);
             // 
             // Middle2
             // 
@@ -235,6 +257,7 @@
             this.Middle2.TabStop = true;
             this.Middle2.Text = "Воздержусь";
             this.Middle2.UseVisualStyleBackColor = true;
+            this.Middle2.CheckedChanged += new System.EventHandler(this.Middle2_CheckedChanged);
             // 
             // comboBox1
             // 
@@ -293,6 +316,7 @@
             this.Yes3.TabStop = true;
             this.Yes3.Text = "Да";
             this.Yes3.UseVisualStyleBackColor = true;
+            this.Yes3.CheckedChanged += new System.EventHandler(this.Yes3_CheckedChanged);
             // 
             // Yes5
             // 
@@ -305,6 +329,7 @@
             this.Yes5.TabStop = true;
             this.Yes5.Text = "Да";
             this.Yes5.UseVisualStyleBackColor = true;
+            this.Yes5.CheckedChanged += new System.EventHandler(this.Yes5_CheckedChanged);
             // 
             // Yes4
             // 
@@ -317,6 +342,7 @@
             this.Yes4.TabStop = true;
             this.Yes4.Text = "Да";
             this.Yes4.UseVisualStyleBackColor = true;
+            this.Yes4.CheckedChanged += new System.EventHandler(this.Yes4_CheckedChanged);
             // 
             // No3
             // 
@@ -329,6 +355,7 @@
             this.No3.TabStop = true;
             this.No3.Text = "Нет";
             this.No3.UseVisualStyleBackColor = true;
+            this.No3.CheckedChanged += new System.EventHandler(this.No3_CheckedChanged);
             // 
             // No4
             // 
@@ -341,6 +368,7 @@
             this.No4.TabStop = true;
             this.No4.Text = "Нет";
             this.No4.UseVisualStyleBackColor = true;
+            this.No4.CheckedChanged += new System.EventHandler(this.No4_CheckedChanged);
             // 
             // No5
             // 
@@ -353,6 +381,7 @@
             this.No5.TabStop = true;
             this.No5.Text = "Нет";
             this.No5.UseVisualStyleBackColor = true;
+            this.No5.CheckedChanged += new System.EventHandler(this.No5_CheckedChanged);
             // 
             // Middle3
             // 
@@ -365,6 +394,7 @@
             this.Middle3.TabStop = true;
             this.Middle3.Text = "Воздержусь";
             this.Middle3.UseVisualStyleBackColor = true;
+            this.Middle3.CheckedChanged += new System.EventHandler(this.Middle3_CheckedChanged);
             // 
             // Middle4
             // 
@@ -377,6 +407,7 @@
             this.Middle4.TabStop = true;
             this.Middle4.Text = "Воздержусь";
             this.Middle4.UseVisualStyleBackColor = true;
+            this.Middle4.CheckedChanged += new System.EventHandler(this.Middle4_CheckedChanged);
             // 
             // Middle5
             // 
@@ -389,6 +420,7 @@
             this.Middle5.TabStop = true;
             this.Middle5.Text = "Воздержусь";
             this.Middle5.UseVisualStyleBackColor = true;
+            this.Middle5.CheckedChanged += new System.EventHandler(this.Middle5_CheckedChanged);
             // 
             // comboBox6
             // 
@@ -410,6 +442,7 @@
             this.Yes6.TabStop = true;
             this.Yes6.Text = "Да";
             this.Yes6.UseVisualStyleBackColor = true;
+            this.Yes6.CheckedChanged += new System.EventHandler(this.Yes6_CheckedChanged);
             // 
             // No6
             // 
@@ -422,6 +455,7 @@
             this.No6.TabStop = true;
             this.No6.Text = "Нет";
             this.No6.UseVisualStyleBackColor = true;
+            this.No6.CheckedChanged += new System.EventHandler(this.No6_CheckedChanged);
             // 
             // Middle6
             // 
@@ -434,6 +468,20 @@
             this.Middle6.TabStop = true;
             this.Middle6.Text = "Воздержусь";
             this.Middle6.UseVisualStyleBackColor = true;
+            this.Middle6.CheckedChanged += new System.EventHandler(this.Middle6_CheckedChanged);
+            // 
+            // result1
+            // 
+            this.result1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.result1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.result1.ForeColor = System.Drawing.Color.White;
+            this.result1.Location = new System.Drawing.Point(12, 213);
+            this.result1.Name = "result1";
+            this.result1.Size = new System.Drawing.Size(110, 42);
+            this.result1.TabIndex = 28;
+            this.result1.Text = "Результат";
+            this.result1.UseVisualStyleBackColor = false;
+            this.result1.Click += new System.EventHandler(this.result1_Click);
             // 
             // LAB1
             // 
@@ -515,5 +563,7 @@
         private System.Windows.Forms.RadioButton No6;
         private System.Windows.Forms.RadioButton Yes6;
         private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Button testbutton;
+        private System.Windows.Forms.Button result1;
     }
 }
