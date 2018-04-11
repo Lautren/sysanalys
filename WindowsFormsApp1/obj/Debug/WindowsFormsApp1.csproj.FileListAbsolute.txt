@@ -159,5 +159,4 @@ C:\Users\Lautren\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System
 C:\Users\Lautren\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\Lautren\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\Lautren\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Lautren\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.LAB1_1.resources
-C:\Users\Lautren\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.addtable.resources
+C:\Users\Lautren\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.addV.resources

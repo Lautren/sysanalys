@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class LAB1
+    partial class addV
     {
         /// <summary>
         /// Required designer variable.
@@ -29,24 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LAB1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addV));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.result1 = new System.Windows.Forms.Button();
             this.testbutton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.TurnButton = new System.Windows.Forms.PictureBox();
             this.UnturnButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TurnButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -54,36 +58,29 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Snow;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(137, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1182, 63);
-            this.panel2.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.Location = new System.Drawing.Point(259, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(767, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Выберите один из предложенных вариантов";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.result1);
             this.panel3.Controls.Add(this.testbutton);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(137, 805);
-            this.panel3.TabIndex = 2;
+            this.panel3.Size = new System.Drawing.Size(137, 561);
+            this.panel3.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 508);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 41);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // result1
             // 
@@ -96,7 +93,6 @@
             this.result1.TabIndex = 28;
             this.result1.Text = "Результат";
             this.result1.UseVisualStyleBackColor = false;
-            this.result1.Click += new System.EventHandler(this.result1_Click);
             // 
             // testbutton
             // 
@@ -109,7 +105,6 @@
             this.testbutton.TabIndex = 27;
             this.testbutton.Text = "Готовый тест";
             this.testbutton.UseVisualStyleBackColor = false;
-            this.testbutton.Click += new System.EventHandler(this.testbutton_Click);
             // 
             // panel4
             // 
@@ -131,7 +126,6 @@
             this.TurnButton.Size = new System.Drawing.Size(19, 18);
             this.TurnButton.TabIndex = 3;
             this.TurnButton.TabStop = false;
-            this.TurnButton.Click += new System.EventHandler(this.TurnButton_Click);
             // 
             // UnturnButton
             // 
@@ -141,7 +135,6 @@
             this.UnturnButton.Size = new System.Drawing.Size(19, 18);
             this.UnturnButton.TabIndex = 2;
             this.UnturnButton.TabStop = false;
-            this.UnturnButton.Click += new System.EventHandler(this.UnturnButton_Click);
             // 
             // CloseButton
             // 
@@ -153,49 +146,107 @@
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Snow;
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(137, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(831, 63);
+            this.panel2.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.textBox1.Location = new System.Drawing.Point(186, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(254, 38);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Введите проблемы";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox2.Location = new System.Drawing.Point(143, 69);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(242, 26);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.Text = "Введите количество проблем";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox3.Location = new System.Drawing.Point(400, 69);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(92, 26);
+            this.textBox3.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(516, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 26);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "OK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(137, 63);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(143, 69);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1182, 742);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(799, 415);
+            this.flowLayoutPanel1.TabIndex = 8;
+            this.flowLayoutPanel1.Visible = false;
             // 
-            // LAB1
+            // addV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 805);
+            this.ClientSize = new System.Drawing.Size(968, 561);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LAB1";
-            this.Text = "LAB1";
-            this.Load += new System.EventHandler(this.LAB1_Load);
-            this.panel2.ResumeLayout(false);
+            this.Name = "addV";
+            this.Text = "addV";
+            this.Load += new System.EventHandler(this.addV_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TurnButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button result1;
+        private System.Windows.Forms.Button testbutton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox TurnButton;
         private System.Windows.Forms.PictureBox UnturnButton;
         private System.Windows.Forms.PictureBox CloseButton;
-        private System.Windows.Forms.Button testbutton;
-        private System.Windows.Forms.Button result1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -195,7 +195,7 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.Label Results;
-        private System.Windows.Forms.Label Welcome;
+        //private System.Windows.Forms.Label Welcome;
     }
 }
 

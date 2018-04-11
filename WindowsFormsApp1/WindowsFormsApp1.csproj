@@ -203,11 +203,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addtable.cs">
+    <Compile Include="addV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addtable.Designer.cs">
-      <DependentUpon>addtable.cs</DependentUpon>
+    <Compile Include="addV.Designer.cs">
+      <DependentUpon>addV.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -220,12 +220,6 @@
     </Compile>
     <Compile Include="LAB1.Designer.cs">
       <DependentUpon>LAB1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LAB1_1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LAB1_1.Designer.cs">
-      <DependentUpon>LAB1_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -247,17 +241,14 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="addtable.resx">
-      <DependentUpon>addtable.cs</DependentUpon>
+    <EmbeddedResource Include="addV.resx">
+      <DependentUpon>addV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LAB1.resx">
       <DependentUpon>LAB1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LAB1_1.resx">
-      <DependentUpon>LAB1_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

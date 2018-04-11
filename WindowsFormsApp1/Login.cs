@@ -40,7 +40,6 @@ namespace WindowsFormsApp1
 
 
             if (LoginBox.Text == "" || PasswordBox.Text == "")
-            //if (result == null)
             {
                 MessageBox.Show("Invalid login or password", "Error", MessageBoxButtons.OK);
             }

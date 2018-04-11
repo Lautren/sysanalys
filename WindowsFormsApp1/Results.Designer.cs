@@ -32,16 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Results));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UnturnButton = new System.Windows.Forms.PictureBox();
             this.TurnButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.UnturnButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -53,14 +52,23 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
             this.panel1.Controls.Add(this.UnturnButton);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.TurnButton);
             this.panel1.Controls.Add(this.CloseButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 53);
+            this.panel1.Size = new System.Drawing.Size(800, 31);
             this.panel1.TabIndex = 0;
+            // 
+            // UnturnButton
+            // 
+            this.UnturnButton.Image = ((System.Drawing.Image)(resources.GetObject("UnturnButton.Image")));
+            this.UnturnButton.Location = new System.Drawing.Point(53, 3);
+            this.UnturnButton.Name = "UnturnButton";
+            this.UnturnButton.Size = new System.Drawing.Size(19, 18);
+            this.UnturnButton.TabIndex = 3;
+            this.UnturnButton.TabStop = false;
+            this.UnturnButton.Click += new System.EventHandler(this.UnturnButton_Click);
             // 
             // TurnButton
             // 
@@ -85,35 +93,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 53);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 419);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Aqua;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(604, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Показ результатов";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // UnturnButton
-            // 
-            this.UnturnButton.Image = ((System.Drawing.Image)(resources.GetObject("UnturnButton.Image")));
-            this.UnturnButton.Location = new System.Drawing.Point(53, 3);
-            this.UnturnButton.Name = "UnturnButton";
-            this.UnturnButton.Size = new System.Drawing.Size(19, 18);
-            this.UnturnButton.TabIndex = 3;
-            this.UnturnButton.TabStop = false;
-            this.UnturnButton.Click += new System.EventHandler(this.UnturnButton_Click);
             // 
             // Results
             // 
@@ -126,11 +111,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Results";
             this.Text = "Results";
+            this.Load += new System.EventHandler(this.Results_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UnturnButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,7 +128,6 @@
         private System.Windows.Forms.PictureBox TurnButton;
         private System.Windows.Forms.PictureBox CloseButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox UnturnButton;
     }
 }

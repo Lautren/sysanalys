@@ -13,9 +13,8 @@ namespace WindowsFormsApp1
         class Choice
         {
             public ObjectId Id { get; set; }
-            public string C { set; get; }
-            public double R { set; get; }
-            public string V { set; get; }
+            public string Заключение { set; get; }
+           
         }
         public Results()
         {
@@ -39,9 +38,20 @@ namespace WindowsFormsApp1
             
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void UnturnButton_Click(object sender, EventArgs e)
         {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
 
+        private void Results_Load(object sender, EventArgs e)
+        {
             LAB1 lab1 = new LAB1();
             MongoClient client = new MongoClient("mongodb://localhost");
             var db = client.GetDatabase("SysAnalys1");
@@ -55,18 +65,6 @@ namespace WindowsFormsApp1
             }
             dataGridView1.DataSource = doclist;
 
-        }
-
-        private void UnturnButton_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
         }
     }
 }
